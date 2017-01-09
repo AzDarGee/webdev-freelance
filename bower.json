@@ -1,0 +1,22 @@
+{
+  "name": "freelance-webdev",
+  "authors": [
+    "AzDarGee <ashishdarji88@gmail.com>"
+  ],
+  "description": "Ashish's Freelance Web Development Site",
+  "main": "",
+  "license": "MIT",
+  "homepage": "index.html",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "foundation": "^5.5.3"
+  }
+}
