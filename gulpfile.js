@@ -6,6 +6,8 @@ var rename = require('gulp-rename');
 var gzip = require('gulp-gzip');
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
+var imagemin = require('gulp-imagemin');
+var cache = require('gulp-cache');
 
 var gzip_options = {
     threshold: '1kb',
@@ -18,7 +20,7 @@ var gzip_options = {
 gulp.task('sass', function() {
   return gulp.src('components/stylesheets/**/*.scss')
       .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('css'))
+      .pipe(gulp.dest('dist/css'))
       .pipe(rename({
         suffix: '.min'
       }))
@@ -60,7 +62,9 @@ gulp.task('uglifyPlugins', function() {
 
 // Minify Plugins
 gulp.task('minifyPlugins', function() {
-  return gulp.src(['components/libs/bootstrap/dist/css/bootstrap.css'])
+  return gulp.src(['components/libs/bootstrap/dist/css/bootstrap.css',
+    'components/libs/animate.css/animate.css',
+    'components/libs/font-awesome/css/font-awesome.css'])
     .pipe(rename({
       suffix: '.min',
       extname: '.css'
@@ -69,6 +73,13 @@ gulp.task('minifyPlugins', function() {
     .pipe(gulp.dest('dist/css'))
     //Browser sync will watch changes and reload on save
     .pipe(browserSync.stream());
+});
+
+// Image Task
+gulp.task('images', function(){
+  gulp.src('components/images/**/*')
+    .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
+    .pipe(gulp.dest('dist/images/'));
 });
 
 // Build Task - Run Uglify & Minify Plugins
@@ -92,4 +103,4 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task('default', ['sass', 'compress', 'uglifyPlugins', 'minifyPlugins', 'watch']);
+gulp.task('default', ['sass', 'compress', 'uglifyPlugins', 'minifyPlugins', 'images', 'watch']);
