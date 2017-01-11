@@ -3,12 +3,16 @@
   padding: 0;
   @include background('../images/bg/bg1.jpg');
   @include blur(3px);
+  &:hover {
+    @include blur(1px);
+    transition-delay: 0.1s;
+  }
 
   @include bp-xxlarge {
     @include background('../images/original/bg1.jpg');
   }
   @include bp-xlarge {
-    @include background('../images/original/bg1.jpg');
+    @include background('../images/bg2x/bg1.jpg');
   }
   @include bp-large {
     @include background('../images/bg2x/bg1.jpg');
@@ -23,9 +27,34 @@
 }
 
 .profile-pic {
-  @include blur(0px);
-  margin-top: -20em;
-  background: transparent;
+  @include blur(1px);
+  margin-top: -25em;
+  padding: 1em;
+  background: rgba(0,0,0,0.5);
+  border-radius: 7px;
   color: white;
+  width: auto;
+  max-width: 500px;
+  &:hover {
+    @include blur(0px);
+    transition-delay: 0.1s;
+  }
+  h1 small {
+    color: white;
+    font-weight: 100;
+    font-size: 0.5em;
+  }
+  em {
+    font-weight: 300;
+    font-size: 2em;
+  }
 
+  @include bp-small {
+    padding: 10px 0;
+    border-radius: 0;
+  }
+}
+
+.no-blur {
+  @include blur(0px);
 }
