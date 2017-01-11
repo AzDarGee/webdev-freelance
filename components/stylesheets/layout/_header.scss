@@ -2,6 +2,7 @@
   height: 400px;
   padding: 0;
   @include background('../images/bg/bg1.jpg');
+  position: relative;
   @include blur(3px);
   &:hover {
     @include blur(1px);
@@ -28,17 +29,15 @@
 
 .profile-pic {
   @include blur(1px);
-  margin-top: -25em;
-  padding: 1em;
+  padding: 2em;
   background: rgba(0,0,0,0.5);
   border-radius: 7px;
   color: white;
-  width: auto;
   max-width: 500px;
+  margin-top: -20em;
   &:hover {
     @include blur(0px);
     transition-delay: 0.1s;
-
   }
   h1 small {
     color: white;
@@ -56,6 +55,23 @@
   }
 }
 
+.spacer {
+  height: 80px;
+  width: 100%;
+  background: transparent;
+}
+
 .no-blur {
   @include blur(0px);
+}
+
+.blur {
+  @include blur(2px);
+}
+
+.projects {
+
+  &:hover {
+    @include blur(0);
+  }
 }
