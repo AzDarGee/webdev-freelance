@@ -1,4 +1,2 @@
-
-
 // Initialize BootStrap Material Design
-$.material.init()
+// $.material.init()
