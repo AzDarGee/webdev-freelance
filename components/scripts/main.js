@@ -3,7 +3,7 @@
 
 $(document).ready(function() {
   $('.profile-pic').mouseenter(function() {
-    $(this).addClass('animated jello');
+  //
 
   });
 });

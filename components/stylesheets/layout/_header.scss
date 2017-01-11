@@ -38,8 +38,7 @@
   &:hover {
     @include blur(0px);
     transition-delay: 0.1s;
-    -webkit-animation: bounce 1s;
-    animation: bounce 1s;
+
   }
   h1 small {
     color: white;
