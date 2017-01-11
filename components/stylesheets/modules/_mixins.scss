@@ -33,25 +33,31 @@
 
 
 @mixin bp-xlarge {
-  @media only screen and (max-width: 80em) {
+  @media only screen and (max-width: 128em) {
     @content;
   }
 }
 
 
 @mixin bp-large {
-  @media only screen and (max-width: 60em) {
+  @media only screen and (max-width: 80em) {
     @content;
   }
 }
 
 @mixin bp-medium {
-  @media only screen and (max-width: 40em) {
+  @media only screen and (max-width: 60em) {
     @content;
   }
 }
 
 @mixin bp-small {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-xmall {
   @media only screen and (max-width: 30em) {
     @content;
   }
