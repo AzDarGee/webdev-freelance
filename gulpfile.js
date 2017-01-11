@@ -136,7 +136,7 @@ var paths = {
 // specifying the folder name, the ouput dimensions and
 // whether or not to crop the images
 var images = [
-    { folder: 'bg', width: 1200, crop: false },
+    { folder: 'bg', width: 1920, crop: false },
     { folder: 'categories', width: 500, height: 330, crop: true },
     { folder: 'projects', width: 800, height: 500, crop: true },
     { folder: 'profile', width: 150, height: 150, crop: false }
