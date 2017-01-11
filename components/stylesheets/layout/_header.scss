@@ -1,14 +1,31 @@
 .header-image-background {
   height: 400px;
-  max-height: 600px;
   padding: 0;
-  bottom: 0;
   @include background('../images/bg/bg1.jpg');
-  background-position: 0 -350px;
   @include blur(3px);
 
-  .profile-pic {
-    @include blur(0px);
+  @include bp-xxlarge {
+    @include background('../images/original/bg1.jpg');
   }
+  @include bp-xlarge {
+    @include background('../images/original/bg1.jpg');
+  }
+  @include bp-large {
+    @include background('../images/bg2x/bg1.jpg');
+  }
+  @include bp-medium {
+    @include background('../images/bg/bg1.jpg');
+  }
+  @include bp-small {
+    @include background('../images/bg/bg1.jpg');
+  }
+
+}
+
+.profile-pic {
+  @include blur(0px);
+  margin-top: -20em;
+  background: transparent;
+  color: white;
 
 }
