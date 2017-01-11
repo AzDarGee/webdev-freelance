@@ -53,7 +53,9 @@ gulp.task('compress', function() {
 // Uglify Plugins
 gulp.task('uglifyPlugins', function() {
   return gulp.src(['components/libs/bootstrap/dist/js/bootstrap.js',
-    'components/libs/jquery/dist/jquery.js'])
+    'components/libs/jquery/dist/jquery.js',
+    'components/libs/MDBootstrap/js/mdb.js',
+    'components/libs/MDBootstrap/js/tether.js'])
     .pipe(rename({
       suffix: '.min',
       extname: '.js'
@@ -68,7 +70,8 @@ gulp.task('uglifyPlugins', function() {
 gulp.task('minifyPlugins', function() {
   return gulp.src(['components/libs/bootstrap/dist/css/bootstrap.css',
     'components/libs/animate.css/animate.css',
-    'components/libs/font-awesome/css/font-awesome.css'])
+    'components/libs/font-awesome/css/font-awesome.css',
+    'components/libs/MDBootstrap/css/mdb.css'])
     .pipe(rename({
       suffix: '.min',
       extname: '.css'
