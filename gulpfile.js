@@ -8,6 +8,7 @@ var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
 var cache = require('gulp-cache');
+var gulpUtil = require('gulp-util');
 
 var gzip_options = {
     threshold: '1kb',
@@ -20,7 +21,6 @@ var gzip_options = {
 gulp.task('sass', function() {
   return gulp.src('components/stylesheets/**/*.scss')
       .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('dist/css'))
       .pipe(rename({
         suffix: '.min'
       }))
@@ -35,7 +35,7 @@ gulp.task('sass', function() {
 // Uglify JS
 gulp.task('compress', function() {
   return gulp.src('components/scripts/*.js')
-    .pipe(uglify())
+    .pipe(uglify().on('error', gulpUtil.log))
     .pipe(gulp.dest('dist/js'))
     .pipe(rename({
       suffix: '.min'
