@@ -1,5 +1,5 @@
 # freelance-web
-Modular static website creation
+This is Ashish Darji's software development consulting website.
 
 ## Tools Being Used
 * Gulp
@@ -9,5 +9,7 @@ Modular static website creation
 * Bourbon
 * FontAwesome
 * BootStrap
+* jQuery
 * AnimateCSS
+* VelocityJS
 * Etc...
