@@ -6,4 +6,8 @@ Modular static website creation
 * Bower
 * NPM
 * BrowserSync
+* Bourbon
+* FontAwesome
+* BootStrap
+* AnimateCSS
 * Etc...
