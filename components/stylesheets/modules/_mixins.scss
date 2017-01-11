@@ -25,6 +25,20 @@
 // Cleaner Breakpoint Media Queries //
 //////////////////////////////////////
 
+@mixin bp-xxlarge {
+  @media only screen and (max-width: 160em) {
+    @content;
+  }
+}
+
+
+@mixin bp-xlarge {
+  @media only screen and (max-width: 80em) {
+    @content;
+  }
+}
+
+
 @mixin bp-large {
   @media only screen and (max-width: 60em) {
     @content;
@@ -92,11 +106,14 @@
 // Background image //
 //////////////////////
 
-@mixin background($imgpath, $position:0 0, $repeat: no-repeat) {
+@mixin background($imgpath, $position:center center, $repeat: no-repeat) {
     background: {
         image: url($imgpath);
         position: $position;
         repeat: $repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-color: #464646;
     }
 }
 
