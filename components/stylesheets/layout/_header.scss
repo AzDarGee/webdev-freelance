@@ -1,5 +1,5 @@
 .header-image-background {
-  height: 400px;
+  height: 500px;
   padding: 0;
   @include background('../images/bg/bg1.jpg');
   position: relative;
@@ -34,7 +34,7 @@
   border-radius: 50%;
   color: white;
   max-width: 550px;
-  margin-top: -20em;
+  margin-top: -33em;
   &:hover {
     @include blur(0px);
     transition-delay: 0.1s;
