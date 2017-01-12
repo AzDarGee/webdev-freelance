@@ -28,12 +28,12 @@
 }
 
 .profile-pic {
-  @include blur(1px);
-  padding: 2em;
+  @include blur(0px);
+  padding: 4em;
   background: rgba(0,0,0,0.5);
-  border-radius: 7px;
+  border-radius: 50%;
   color: white;
-  max-width: 500px;
+  max-width: 550px;
   margin-top: -20em;
   &:hover {
     @include blur(0px);
@@ -48,12 +48,28 @@
     font-weight: 300;
     font-size: 2em;
   }
+  .btn-fb {
+    background-color: #3B5998;
+  }
+  .btn-tw {
+    background-color: #55ACEE;
+  }
+  .btn-gplus {
+    background-color: #DD4B39;
+  }
+  .btn-li {
+    background-color: #0082CA;
+  }
+  .btn-ins {
+    background-color: #3F729B;
+  }
 
   @include bp-small {
     padding: 10px 0;
     border-radius: 0;
   }
 }
+
 
 .spacer {
   height: 80px;
@@ -70,7 +86,6 @@
 }
 
 .projects {
-
   &:hover {
     @include blur(0);
   }
