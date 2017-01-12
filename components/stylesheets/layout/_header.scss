@@ -71,11 +71,11 @@
 }
 
 .spacer {
-  height: 50px;
+  height: 20px;
   width: 100%;
   background: transparent;
   @include bp-small {
-    height: 140px;
+    height: 100px;
   }
   @include bp-xsmall {
     height: 80px;
