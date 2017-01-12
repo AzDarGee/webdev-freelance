@@ -65,16 +65,21 @@
   }
 
   @include bp-small {
-    padding: 10px 0;
-    border-radius: 0;
+    padding: 2em;
+    border-radius:0;
   }
 }
 
-
 .spacer {
-  height: 80px;
+  height: 50px;
   width: 100%;
   background: transparent;
+  @include bp-small {
+    height: 140px;
+  }
+  @include bp-xsmall {
+    height: 80px;
+  }
 }
 
 .no-blur {

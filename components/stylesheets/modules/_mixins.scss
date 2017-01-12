@@ -57,7 +57,7 @@
   }
 }
 
-@mixin bp-xmall {
+@mixin bp-xsmall {
   @media only screen and (max-width: 30em) {
     @content;
   }
