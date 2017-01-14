@@ -1,74 +1,115 @@
-.header-image-background {
-  height: 500px;
-  padding: 0;
-  @include background('../images/bg/bg1.jpg');
-  position: relative;
-  @include blur(3px);
-  &:hover {
-    @include blur(1px);
-    transition-delay: 0.1s;
-  }
+// .header-image-background {
+//   height: 500px;
+//   padding: 0;
+//   @include background('../images/bg/bg1-prof.jpg');
+//   position: relative;
+//   top: 0;
+//   @include blur(3px);
+//   &:hover {
+//     @include blur(1px);
+//     transition-delay: 0.1s;
+//   }
+//
+//   @include bp-xxlarge {
+//     @include background('../images/original/bg1-prof.jpg');
+//   }
+//   @include bp-xlarge {
+//     @include background('../images/bg2x/bg1-prof.jpg');
+//   }
+//   @include bp-large {
+//     @include background('../images/bg2x/bg1-prof.jpg');
+//   }
+//   @include bp-medium {
+//     @include background('../images/bg/bg1-prof.jpg');
+//   }
+//   @include bp-small {
+//     @include background('../images/bg/bg1-prof.jpg');
+//   }
+//
+// }
 
-  @include bp-xxlarge {
-    @include background('../images/original/bg1.jpg');
-  }
-  @include bp-xlarge {
-    @include background('../images/bg2x/bg1.jpg');
-  }
-  @include bp-large {
-    @include background('../images/bg2x/bg1.jpg');
-  }
-  @include bp-medium {
-    @include background('../images/bg/bg1.jpg');
-  }
-  @include bp-small {
-    @include background('../images/bg/bg1.jpg');
-  }
 
+
+
+html,
+body,
+.view {
+    height: 100%;
 }
 
-.profile-pic {
-  @include blur(0px);
-  padding: 4em;
-  background: rgba(0,0,0,0.5);
-  border-radius: 50%;
-  color: white;
-  max-width: 550px;
-  margin-top: -33em;
-  &:hover {
-    @include blur(0px);
-    transition-delay: 0.1s;
-  }
-  h1 small {
-    color: white;
-    font-weight: 100;
-    font-size: 0.3em;
-  }
-  em {
-    font-weight: 300;
-    font-size: 1.6em;
-  }
-  .btn-fb {
-    background-color: #3B5998;
-  }
-  .btn-tw {
-    background-color: #55ACEE;
-  }
-  .btn-gplus {
-    background-color: #DD4B39;
-  }
-  .btn-li {
-    background-color: #0082CA;
-  }
-  .btn-ins {
-    background-color: #3F729B;
-  }
-
-  @include bp-small {
-    padding: 2em;
-    border-radius:0;
-  }
+.view {
+    background: url("../images/bg/bg13-small.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    @include blur(3px);
+    &:hover {
+      @include blur(0px);
+      // transition-delay: 1s;
+    }
 }
+
+/* Navigation*/
+
+.navbar {
+    background-color: transparent;
+}
+
+.top-nav-collapse {
+    background-color: #4285F4;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar {
+        background-color: #4285F4;
+    }
+}
+
+
+
+// .profile-pic {
+//   @include blur(0px);
+//   padding: 4em;
+//   background: rgba(0,0,0,0.5);
+//   border-radius: 50%;
+//   color: white;
+//   max-width: 550px;
+//   margin-top: -33em;
+//   &:hover {
+//     @include blur(0px);
+//     transition-delay: 0.1s;
+//   }
+//   h1 small {
+//     color: white;
+//     font-weight: 100;
+//     font-size: 0.3em;
+//   }
+//   em {
+//     font-weight: 300;
+//     font-size: 1.6em;
+//   }
+//   .btn-fb {
+//     background-color: #3B5998;
+//   }
+//   .btn-tw {
+//     background-color: #55ACEE;
+//   }
+//   .btn-gplus {
+//     background-color: #DD4B39;
+//   }
+//   .btn-li {
+//     background-color: #0082CA;
+//   }
+//   .btn-ins {
+//     background-color: #3F729B;
+//   }
+//
+//   @include bp-small {
+//     padding: 2em;
+//     border-radius:0;
+//   }
+// }
 
 .spacer {
   height: 20px;
