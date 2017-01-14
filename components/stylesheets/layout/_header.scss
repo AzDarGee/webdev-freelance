@@ -38,7 +38,7 @@ body,
 }
 
 .view {
-    background: url("../images/bg/bg13-small.jpg")no-repeat center center fixed;
+    background: url("../images/bg/bg14-small.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -70,16 +70,18 @@ body,
 
 .profile-pic {
   @include blur(0px);
-  padding: 1em;
+  padding: 3em;
   background: rgba(0,0,0,0.5);
-  border-radius: 0%;
+  border-top-right-radius: 0;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0px;
   color: white;
   max-width: 550px;
   position: absolute;
   z-index: 99999;
-  margin-top: 1em;
-  right: 0;
-  bottom: 0;
+  right: 0em;
+  bottom: 0em;
   &:hover {
     @include blur(0px);
     transition-delay: 0.1s;
