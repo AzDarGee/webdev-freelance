@@ -2,10 +2,7 @@
 // $.material.init()
 
 $(document).ready(function() {
-  $('.profile-pic').mouseenter(function() {
-  //
-
-  });
+  
 
 
   new WOW().init();

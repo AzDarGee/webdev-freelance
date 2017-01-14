@@ -200,7 +200,6 @@ $z-indexes: (
     perspective: $perspective;
 }
 
-
 @mixin blur($amount) {
   -webkit-filter: blur($amount);
   -moz-filter: blur($amount);
