@@ -18,5 +18,8 @@
     "gulp-uglify": "^2.0.0",
     "gulp-util": "^3.0.8",
     "imagemin-pngquant": "^5.0.0"
+  },
+  "dependencies": {
+    "twitter": "^1.7.0"
   }
 }
