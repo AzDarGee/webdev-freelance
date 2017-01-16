@@ -38,7 +38,7 @@ body,
 }
 
 .view {
-    background: url("../images/bg/bg14-small.jpg")no-repeat center center fixed;
+    background: url("../images/bg/bg15-small.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -46,7 +46,6 @@ body,
     @include blur(3px);
     &:hover {
       @include blur(0px);
-      // transition-delay: 1s;
     }
 }
 
@@ -114,6 +113,30 @@ body,
   @include bp-small {
     padding: 2em;
     border-radius:0;
+  }
+}
+
+.bg-image-desc {
+  @include blur(0px);
+  padding: 1em;
+  background: rgba(0,0,0,0.5);
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: white;
+  max-width: 550px;
+  position: absolute;
+  z-index: 99999;
+  left: 3em;
+  top: 3em;
+  &:hover {
+    @include blur(0px);
+    transition-delay: 0.1s;
+  }
+
+  @include bp-small {
+    padding: 1em;
   }
 }
 
