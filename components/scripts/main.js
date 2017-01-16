@@ -2,15 +2,19 @@
 // $.material.init()
 
 $(document).ready(function() {
-  
+
 
 
   new WOW().init();
 
+  $('body').scrollspy({
+    target: '.dotted-scrollspy'
+  });
+
 
   // Map for contacting me
   function init_map() {
-      var var_location = new google.maps.LatLng(40.725118, -73.997699);
+      var var_location = new google.maps.LatLng(45.345200, -75.918986);
 
       var var_mapoptions = {
           center: var_location,
@@ -20,7 +24,7 @@ $(document).ready(function() {
       var var_marker = new google.maps.Marker({
           position: var_location,
           map: var_map,
-          title: "New York"
+          title: "Ottawa"
       });
 
       var var_map = new google.maps.Map(document.getElementById("map-container"),

@@ -65,8 +65,6 @@ body,
     }
 }
 
-
-
 .profile-pic {
   @include blur(0px);
   padding: 3em;
@@ -117,6 +115,7 @@ body,
 }
 
 .bg-image-desc {
+  display: none;
   @include blur(0px);
   padding: 1em;
   background: rgba(0,0,0,0.5);
@@ -137,18 +136,6 @@ body,
 
   @include bp-small {
     padding: 1em;
-  }
-}
-
-.spacer {
-  height: 20px;
-  width: 100%;
-  background: transparent;
-  @include bp-small {
-    height: 100px;
-  }
-  @include bp-xsmall {
-    height: 80px;
   }
 }
 

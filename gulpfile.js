@@ -13,6 +13,7 @@ var pngquant = require('imagemin-pngquant');
 var imageresize = require('gulp-image-resize');
 var cache = require('gulp-cache');
 var gulpUtil = require('gulp-util');
+var Twitter = require('twitter');
 
 var gzip_options = {
     threshold: '1kb',
@@ -81,13 +82,6 @@ gulp.task('minifyPlugins', function() {
     //Browser sync will watch changes and reload on save
     .pipe(browserSync.stream());
 });
-
-// Image Task
-// gulp.task('images', function(){
-//   gulp.src('components/images/**/*')
-//     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-//     .pipe(gulp.dest('dist/images/'));
-// });
 
 // Build Task - Run Uglify & Minify Plugins
 gulp.task('build', ['uglifyPlugins', 'minifyPlugins']);
@@ -184,4 +178,24 @@ gulp.task('images', function () {
         // maintaining the folder structure
         .pipe(gulp.dest(paths.dest+paths.folder+type.folder));
     });
+});
+
+
+/* twitter */
+gulp.task('twitter', function() {
+
+  var client = new Twitter({
+    consumer_key: 'Z9pVJo9jic4EC9kHnprVQsjAs',
+    consumer_secret: 'JM1aGjuKOikz8XHtIs72b85qdaf2jzmtTNT02n9RWmDlWME3Ad',
+    access_token_key: '2238399828-peO2Qpt2K3oTV0P1UeUQggQvVDhY7aEXP5IfRVD',
+    access_token_secret: '2UFPVGnOiEthmt2flhW82SAJR9nQ562DLrC1EIUxjL2lS'
+  });
+
+  var params = {screen_name: 'ashdarji'};
+  client.get('statuses/user_timeline', params, function(error, tweets, response) {
+    if (!error) {
+      // console.log(tweets);
+    }
+  });
+
 });
