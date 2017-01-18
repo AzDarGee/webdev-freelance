@@ -92,20 +92,33 @@ body,
     font-weight: 300;
     font-size: 1.6em;
   }
-  .btn-fb {
-    background-color: #3B5998;
+  .btn-floating {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    width: 37px;
+    height: 37px;
+    padding: 0;
+    background-color: rgba(255,255,255,0.3);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    transition: .3s;
+    margin: 10px;
+    display: inline-block;
+    line-height: 55px;
+    cursor: pointer;
+    vertical-align: middle;
+    opacity: 0.4;
+    &:hover {
+      background-color: rgba(255,255,255,0.7);
+    }
   }
-  .btn-tw {
-    background-color: #55ACEE;
-  }
-  .btn-gplus {
-    background-color: #DD4B39;
-  }
-  .btn-li {
-    background-color: #0082CA;
-  }
-  .btn-ins {
-    background-color: #3F729B;
+  .btn-large {
+    width: 55.5px;
+    height: 55.5px;
   }
 
   @include bp-small {
