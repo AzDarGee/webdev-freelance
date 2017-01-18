@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="dist/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/css/style.min.css">
   </head>
-  <body>
+  <body class="smooth-scroll">
 
     <div class="bg-image-desc">
       Bridlewood, Kanata - CANADA
     </div>
 
-    <center>
-      <div class="profile-pic animated rubberBand">
+    <center class="smooth-scroll">
+      <div class="smooth-scroll profile-pic animated fadeIn">
         <img src="dist/images/profile/profile3.jpg" alt="" class="rounded">
         <hr color="white">
         <h1>Ashish Darji</h1>
@@ -29,12 +29,14 @@
           Software and Design go hand-in-hand. Light & Dark and Yin & Yang.
           Beautifuly Custom Crafted Websites and Applications.
         </p>
-        <p class="smooth-scroll"><a href="#coffee">Let's Connect</a></p>
+        <p class="smooth-scroll">
+          <a class="btn-floating btn-large animated fadeInDown" href="#about-me"><i class="fa fa-arrow-down"></i></a>
+        </p>
       </div>
     </center>
 
     <!--Mask-->
-    <div class="view main-bg animated jello">
+    <div class="view main-bg animated fadeIn">
         <!--Intro content-->
         <div class="full-bg-img flex-center">
 
@@ -46,7 +48,7 @@
       <div class="container">
 
         <!-- About Me -->
-        <div class="divider-new">
+        <div class="divider-new" id="about-me">
             <h2 class="h2-responsive wow bounceIn" style="visibility: visible; animation-name: bounceIn;">About Me</h2>
         </div>
         <!--Section: About-->
@@ -629,7 +631,7 @@
 
         <!-- Let's Connect -->
         <div class="divider-new">
-            <h2 class="h2-responsive wow bounceIn" style="visibility: visible; animation-name: bounceIn;">Let's Connect</h2>
+            <h2 class="h2-responsive wow bounceIn" style="visibility: visible; animation-name: bounceIn;" id="connect">Let's Connect</h2>
         </div>
 
         <!--Section: Contact v.1-->
