@@ -21,54 +21,6 @@
 //   @include font-size(14px)
 // }
 
-//////////////////////////////////////
-// Cleaner Breakpoint Media Queries //
-//////////////////////////////////////
-
-@mixin bp-xxlarge {
-  @media only screen and (max-width: 160em) {
-    @content;
-  }
-}
-
-
-@mixin bp-xlarge {
-  @media only screen and (max-width: 128em) {
-    @content;
-  }
-}
-
-
-@mixin bp-large {
-  @media only screen and (max-width: 80em) {
-    @content;
-  }
-}
-
-@mixin bp-medium {
-  @media only screen and (max-width: 60em) {
-    @content;
-  }
-}
-
-@mixin bp-small {
-  @media only screen and (max-width: 40em) {
-    @content;
-  }
-}
-
-@mixin bp-xsmall {
-  @media only screen and (max-width: 30em) {
-    @content;
-  }
-}
-
-// USAGE:
-// @include bp-small {
-//     width: 100%;
-//     float: none;
-//     margin: 0;
-//   }
 
 //////////////////////////////////////
 // Quickly Center an element        //
