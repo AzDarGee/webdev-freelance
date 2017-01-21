@@ -121,9 +121,19 @@ body,
     height: 55.5px;
   }
 
+  @include bp-iphone5-5s {
+    .small-prof-pic {
+      display: none;
+    }
+    .scroll-button {
+      display: none;
+    }
+  }
+
   @include bp-small {
     padding: 2em;
     border-radius:0;
+
   }
 }
 
