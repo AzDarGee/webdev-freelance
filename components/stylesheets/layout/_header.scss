@@ -137,6 +137,18 @@ body,
   }
 }
 
+.about-img {
+  margin-bottom: 2em;
+}
+
+.about-me-text {
+  @include bp-small {
+    padding: 10px;
+
+  }
+  
+}
+
 .bg-image-desc {
   display: none;
   @include blur(0px);
