@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Ashish Darji | Dev Consultant</title>
+    <title>Ashish Darji | Web Freelance</title>
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/mdb.min.css">
     <link rel="stylesheet" href="dist/css/animate.min.css">
@@ -27,7 +27,7 @@
         <h4><small>"If opportunity doesn't knock, build a door."</small></h4>
         <hr color="white">
         <p>
-          Software and Design go hand-in-hand. Light & Dark and Yin & Yang.
+          Software and Design go hand-in-hand. Architecting & Engineering
           Beautifuly Custom Crafted Websites and Applications.
         </p>
         <p class="scroll-button">
@@ -751,42 +751,47 @@
                     <div class="card">
 
                         <div class="card-block">
-                            <!--Header-->
-                            <div class="form-header">
-                                <h3><i class="fa fa-envelope"></i> Write to us:</h3>
-                            </div>
 
-                            <p>Ashish will be in touch with you shortly.</p>
-                            <br>
+                            <form action="http://formspree.io/ashdarji1@gmail.com" method="POST">
 
-                            <!--Body-->
-                            <div class="md-form">
-                                <i class="fa fa-user prefix"></i>
-                                <input type="text" id="form3" class="form-control">
-                                <label for="form3">Your name</label>
-                            </div>
+                              <!--Header-->
+                              <div class="form-header">
+                                  <h3><i class="fa fa-envelope"></i> Write to us:</h3>
+                              </div>
 
-                            <div class="md-form">
-                                <i class="fa fa-envelope prefix"></i>
-                                <input type="text" id="form2" class="form-control">
-                                <label for="form2">Your email</label>
-                            </div>
+                              <p>Ashish will be in touch with you shortly.</p>
+                              <br>
 
-                            <div class="md-form">
-                                <i class="fa fa-tag prefix"></i>
-                                <input type="text" id="form32" class="form-control">
-                                <label for="form32">Subject</label>
-                            </div>
+                              <!--Body-->
+                              <div class="md-form">
+                                  <i class="fa fa-user prefix"></i>
+                                  <input type="text" id="name" name="name" class="form-control" required>
+                                  <label for="name-input">Your name</label>
+                              </div>
 
-                            <div class="md-form">
-                                <i class="fa fa-pencil prefix"></i>
-                                <textarea type="text" id="form8" class="md-textarea"></textarea>
-                                <label for="form8">Project Description</label>
-                            </div>
+                              <div class="md-form">
+                                  <i class="fa fa-envelope prefix"></i>
+                                  <input type="text" id="email" name="email" class="form-control" required>
+                                  <label for="email-input">Your email</label>
+                              </div>
 
-                            <div class="text-xs-center">
-                                <button class="btn btn-info">Send</button>
-                            </div>
+                              <div class="md-form">
+                                  <i class="fa fa-tag prefix"></i>
+                                  <input type="text" id="subject" name="subject" class="form-control" required>
+                                  <label for="subject-input">Subject</label>
+                              </div>
+
+                              <div class="md-form">
+                                  <i class="fa fa-pencil prefix"></i>
+                                  <textarea type="text" id="description" name="description" class="md-textarea" required></textarea>
+                                  <label for="desc-input">Project Description</label>
+                              </div>
+
+                              <div class="text-xs-center">
+                                  <button class="btn btn-info" id="send-btn">Send</button>
+                              </div>
+
+                            </form>
 
                         </div>
 
