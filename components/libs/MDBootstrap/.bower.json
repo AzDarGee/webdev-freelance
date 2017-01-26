@@ -17,14 +17,14 @@
     "responsive"
   ],
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.5",
-    "jquery": "~2.2.3"
+    "bootstrap": "v4.0.0-alpha.6",
+    "jquery": "~3.1.1"
   },
   "authors": [
     "MDBootstrap"
   ],
   "license": "Custom license (read license.pdf)",
-  "homepage": "http://mdbootstrap.com",
+  "homepage": "https://mdbootstrap.com",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -32,15 +32,15 @@
     "test",
     "tests"
   ],
-  "version": "4.2.0",
-  "_release": "4.2.0",
+  "version": "4.3.0",
+  "_release": "4.3.0",
   "_resolution": {
     "type": "version",
-    "tag": "4.2.0",
-    "commit": "65bef2890953fb21b1a00f80c63c32b64775344d"
+    "tag": "4.3.0",
+    "commit": "4b12092cad98ef0e025220a9071c8763adfd8ff6"
   },
   "_source": "https://github.com/mdbootstrap/bootstrap-material-design.git",
-  "_target": "4.2.0",
+  "_target": "~4.3.0",
   "_originalSource": "MDBootstrap",
   "_direct": true
 }
