@@ -14,6 +14,7 @@ var imageresize = require('gulp-image-resize');
 var cache = require('gulp-cache');
 var gulpUtil = require('gulp-util');
 var Twitter = require('twitter');
+var exec = require('child_process').exec;
 
 var gzip_options = {
     threshold: '1kb',
@@ -21,6 +22,31 @@ var gzip_options = {
         level: 9
     }
 };
+
+// Update All Bower/NPM Packages + Uglify + Minify Plugins
+gulp.task('updatePackages', function (cb) {
+  // Update Bower Packages
+  exec('bower-update --non-interactive', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    if (err) cb(err);
+  });
+
+  // Update NPM Packages
+  exec('npm update', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    if (err) return cb(err);
+  });
+
+  // Minify + Uglify Newly Updated Packages
+  exec('gulp build', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    if (err) return cb(err);
+    cb(); // finished task
+  });
+});
 
 /* Compile Our Sass */
 gulp.task('sass', function() {
