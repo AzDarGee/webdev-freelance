@@ -24,6 +24,7 @@ var gzip_options = {
 };
 
 // Update All Bower/NPM Packages + Uglify + Minify Plugins
+// Will potentially screw up the site because vendors add/drop features and tags
 gulp.task('updatePackages', function (cb) {
   // Update Bower Packages
   exec('bower-update --non-interactive', function (err, stdout, stderr) {
