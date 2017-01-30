@@ -18,7 +18,10 @@ $(document).ready(function() {
 
       var var_mapoptions = {
           center: var_location,
-          zoom: 14
+          zoom: 14,
+          draggable: false,
+          disableDoubleClickZoom: true,
+          zoomControl: false
       };
 
       var var_marker = new google.maps.Marker({
