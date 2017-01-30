@@ -21,7 +21,12 @@ $(document).ready(function() {
           zoom: 14,
           draggable: false,
           disableDoubleClickZoom: true,
-          zoomControl: false
+          zoomControl: false,
+          scaleControl: false,
+          rotateControl: false,
+          fullscreenControl: false,
+          scrollwheel: false,
+          navigationControl: false
       };
 
       var var_marker = new google.maps.Marker({
