@@ -163,6 +163,7 @@ var images = [
     { folder: 'bg', width: 1920, crop: false },
     { folder: 'bg2x', width: 2048, crop: false },
     { folder: 'original', crop: false },
+    { folder: 'icons', crop: false },
     { folder: 'projects', width: 300, height: 300, crop: false },
     { folder: 'profile', width: 150, height: 150, crop: false },
     { folder: 'profile2x', width: 250, height: 400, crop: false }
