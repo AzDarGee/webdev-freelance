@@ -14,7 +14,7 @@ $(document).ready(function() {
 
   // Map for contacting me
   function init_map() {
-      var var_location = new google.maps.LatLng(45.345200, -75.918986);
+      var var_location = new google.maps.LatLng(45.277792, -75.885912);
 
       var var_mapoptions = {
           center: var_location,
