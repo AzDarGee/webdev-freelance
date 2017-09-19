@@ -36,7 +36,9 @@ body,
 .view {
     height: 100%;
 }
-
+body {
+  background-color: rgba(1,1,1,0.5);
+}
 .main-bg {
     background: url("../images/bg/lucidlabs-cover.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -129,37 +131,40 @@ body,
         -webkit-filter: blur(3px); filter: blur(3px);
         -webkit-filter: invert(100%); filter: invert(100%);
       }
+      @include bp-xsmall {
+          height: 25px;
+      }
   }
 
   @include bp-iphone5-5s {
     .small-prof-pic {
-      display: none;
+      // display: none;
     }
     .scroll-button {
-      display: none;
+      // display: none;
     }
   }
 
   @include bp-small {
     padding: 2em;
     border-radius:0;
-
+    max-width: none;
   }
 }
 
 .about-img {
-  margin-bottom: 2em;
-  max-width: 400px;
-  max-height: 250px;
+  @include bp-medium {
+    margin-bottom: 2em;
+  }
 }
 
 .about-me-text {
-  min-height: 250px;
-  @include bp-small {
-    padding: 10px;
-
+  .quote {
+    // margin-top: 18%;
+    @include bp-xsmall {
+      margin-top: auto;
+    }
   }
-
 }
 
 .bg-image-desc {
@@ -181,7 +186,6 @@ body,
     @include blur(0px);
     transition-delay: 0.1s;
   }
-
   @include bp-small {
     padding: 1em;
   }
