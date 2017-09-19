@@ -40,6 +40,24 @@
   }
 }
 
+@mixin bp-xx-small {
+  @media only screen and (max-width: 25em) {
+    @content;
+  }
+}
+
+@mixin bp-xxsmall {
+  @media only screen and (max-width: 20em) {
+    @content;
+  }
+}
+
+@mixin bp-xxxsmall {
+  @media only screen and (max-width: 15em) {
+    @content;
+  }
+}
+
 // USAGE OF BREAKPOINTS:
 // @include bp-small {
 //     width: 100%;
