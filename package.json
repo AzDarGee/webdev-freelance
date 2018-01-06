@@ -1,7 +1,8 @@
 {
-  "name": "freelance-web",
+  "name": "webdev-freelance",
   "version": "1.0.0",
-  "description": "Ashish Web Dev Freelance Site",
+  "private": true,
+  "description": "Lucid Labs Website",
   "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -24,11 +25,13 @@
   "dependencies": {
     "connect-form": "^0.2.1",
     "express": "^4.14.0",
+    "mdbootstrap": "^4.4.3",
+    "node-sass": "^4.7.2",
     "nodemailer": "^2.7.2",
     "sendmail": "^1.1.1",
     "twitter": "^1.7.0"
   },
   "engines": {
-    "node": "7.4.0"
+    "node": "9.2.1"
   }
 }

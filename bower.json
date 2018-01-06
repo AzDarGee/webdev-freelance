@@ -1,9 +1,9 @@
 {
-  "name": "freelance-webdev",
+  "name": "webdev-freelance",
   "authors": [
     "AzDarGee <ashishdarji88@gmail.com>"
   ],
-  "description": "Ashish's Freelance Web Development Site",
+  "description": "Lucid Labs Website",
   "main": "",
   "license": "MIT",
   "homepage": "index.html",
