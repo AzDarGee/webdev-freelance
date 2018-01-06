@@ -23,9 +23,67 @@ var gzip_options = {
     }
 };
 
+gulp.task('updateTools', function (cb) {
+  // NPM Clean Cache
+  exec('sudo npm cache clean -f', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    if (err) cb(err);
+  });
+
+  // Bower Clean Cache
+  exec('bower cache clean --allow-root', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    if (err) cb(err);
+  });
+
+  // Update Node To Latest Stable Release
+  exec('sudo npm install -g n', function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      if (err) return cb(err);
+  });
+
+  exec('sudo n stable', function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      if (err) return cb(err);
+  });
+
+  // Update NPM Globally To Latest Version
+  exec('sudo npm install npm@latest -g', function (err, stdout, stderr) {
+      console.log(stdout);
+      console.log(stderr);
+      if (err) return cb(err);
+  });
+
+  // Minify + Uglify Newly Updated Packages
+  exec('gulp build', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    if (err) return cb(err);
+    cb(); // finished task
+  });
+});
+
 // Update All Bower/NPM Packages + Uglify + Minify Plugins
 // Will potentially screw up the site because vendors add/drop features and tags
 gulp.task('updatePackages', function (cb) {
+  // NPM Clean Cache
+  exec('npm cache clean -f', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    if (err) cb(err);
+  });
+
+  // Bower Clean Cache
+  exec('bower cache clean', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    if (err) cb(err);
+  });
+
   // Update Bower Packages
   exec('bower-update --non-interactive', function (err, stdout, stderr) {
     console.log(stdout);
