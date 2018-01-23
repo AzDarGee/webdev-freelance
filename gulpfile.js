@@ -148,8 +148,6 @@ gulp.task('copyMDBImgs', function() {
    .pipe(browserSync.stream());
 });
 
-
-
 // Build Task - Run Uglify & Minify Plugins
 gulp.task('build', ['uglifyPlugins', 'minifyPlugins', 'compress', 'sass']);
 
@@ -172,6 +170,10 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['sass', 'compress', 'uglifyPlugins', 'minifyPlugins', 'images', 'watch']);
+
+// NEED A DEPLOY SCRIPT
+
+
 
 /**
  * Make sure Graphicsmagick is installed on your system
