@@ -13,7 +13,6 @@ var pngquant = require('imagemin-pngquant');
 var imageresize = require('gulp-image-resize');
 var cache = require('gulp-cache');
 var gulpUtil = require('gulp-util');
-var Twitter = require('twitter');
 var exec = require('child_process').exec;
 
 var gzip_options = {
@@ -23,7 +22,7 @@ var gzip_options = {
     }
 };
 
-// Update NPM tools
+// Update Node / NPM
 gulp.task('updateTools', function (cb) {
 
   // Update Node To Latest Stable Release
@@ -55,7 +54,7 @@ gulp.task('updateTools', function (cb) {
   });
 });
 
-// Update All Bower/NPM Packages + Uglify + Minify Plugins
+// Update All NPM Packages + Uglify + Minify Plugins
 // Will potentially screw up the site because vendors add/drop features and tags
 gulp.task('updatePackages', function (cb) {
 
@@ -75,7 +74,7 @@ gulp.task('updatePackages', function (cb) {
   });
 });
 
-/* Compile Our Sass */
+/* Compile Sass */
 gulp.task('sass', function() {
   return gulp.src('components/stylesheets/**/*.scss')
       .pipe(sass().on('error', sass.logError))
@@ -142,6 +141,7 @@ gulp.task('copyFonts', function() {
    .pipe(browserSync.stream());
 });
 
+//Copy MDBootstrap Imgs Folder to Dist
 gulp.task('copyMDBImgs', function() {
    gulp.src('./node_modules/mdbootstrap/img/**/*.{png,svg,gif,jpg,jpeg,}')
    .pipe(gulp.dest('dist/img'))
@@ -149,7 +149,7 @@ gulp.task('copyMDBImgs', function() {
 });
 
 // Build Task - Run Uglify & Minify Plugins
-gulp.task('build', ['uglifyPlugins', 'minifyPlugins', 'compress', 'sass']);
+gulp.task('build', ['compress', 'sass', 'uglifyPlugins', 'minifyPlugins']);
 
 /* Watch Files For Changes */
 gulp.task('watch', function() {
@@ -169,10 +169,13 @@ gulp.task('watch', function() {
 
 });
 
-gulp.task('default', ['sass', 'compress', 'uglifyPlugins', 'minifyPlugins', 'images', 'watch']);
+gulp.task('startServer', ['build', 'watch']);
+
+gulp.task('newProject', ['updateTools', 'updatePackages']);
+
+// Initialize Project Script
 
 // NEED A DEPLOY SCRIPT
-
 
 
 /**
