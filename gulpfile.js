@@ -23,20 +23,8 @@ var gzip_options = {
     }
 };
 
+// Update NPM tools
 gulp.task('updateTools', function (cb) {
-  // NPM Clean Cache
-  exec('sudo npm cache clean -f', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    if (err) cb(err);
-  });
-
-  // Bower Clean Cache
-  exec('bower cache clean --allow-root', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    if (err) cb(err);
-  });
 
   // Update Node To Latest Stable Release
   exec('sudo npm install -g n', function (err, stdout, stderr) {
@@ -70,29 +58,9 @@ gulp.task('updateTools', function (cb) {
 // Update All Bower/NPM Packages + Uglify + Minify Plugins
 // Will potentially screw up the site because vendors add/drop features and tags
 gulp.task('updatePackages', function (cb) {
-  // NPM Clean Cache
-  exec('npm cache clean -f', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    if (err) cb(err);
-  });
-
-  // Bower Clean Cache
-  exec('bower cache clean', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    if (err) cb(err);
-  });
-
-  // Update Bower Packages
-  exec('bower-update --non-interactive', function (err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    if (err) cb(err);
-  });
 
   // Update NPM Packages
-  exec('npm update', function (err, stdout, stderr) {
+  exec('npm update -save', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     if (err) return cb(err);
@@ -122,7 +90,7 @@ gulp.task('sass', function() {
       .pipe(browserSync.stream());
 });
 
-// Uglify JS
+// Uglify My JS files
 gulp.task('compress', function() {
   return gulp.src('components/scripts/*.js')
     .pipe(uglify().on('error', gulpUtil.log))
@@ -136,12 +104,11 @@ gulp.task('compress', function() {
     .pipe(browserSync.stream());
 });
 
-// Uglify Plugins
+// Uglify JS Plugins
 gulp.task('uglifyPlugins', function() {
-  return gulp.src(['components/libs/bootstrap/dist/js/bootstrap.js',
-    'components/libs/jquery/dist/jquery.js',
-    'components/libs/MDBootstrap/js/mdb.js',
-    'components/libs/MDBootstrap/js/tether.js'])
+  return gulp.src(['node_modules/mdbootstrap/js/bootstrap.js',
+    'node_modules/jquery/dist/jquery.js',
+    'node_modules/MDBootstrap/js/mdb.js'])
     .pipe(rename({
       suffix: '.min',
       extname: '.js'
@@ -154,10 +121,10 @@ gulp.task('uglifyPlugins', function() {
 
 // Minify Plugins
 gulp.task('minifyPlugins', function() {
-  return gulp.src(['components/libs/bootstrap/dist/css/bootstrap.css',
-    'components/libs/animate.css/animate.css',
-    'components/libs/font-awesome/css/font-awesome.css',
-    'components/libs/MDBootstrap/css/mdb.css'])
+  return gulp.src(['node_modules/mdbootstrap/css/bootstrap.css',
+    'node_modules/animate.css/animate.css',
+    'node_modules/font-awesome/css/font-awesome.css',
+    'node_modules/mdbootstrap/css/mdb.css'])
     .pipe(rename({
       suffix: '.min',
       extname: '.css'
@@ -168,8 +135,23 @@ gulp.task('minifyPlugins', function() {
     .pipe(browserSync.stream());
 });
 
+// Copy Fonts
+gulp.task('copyFonts', function() {
+   gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg}')
+   .pipe(gulp.dest('dist/font'))
+   .pipe(browserSync.stream());
+});
+
+gulp.task('copyMDBImgs', function() {
+   gulp.src('./node_modules/mdbootstrap/img/**/*.{png,svg,gif,jpg,jpeg,}')
+   .pipe(gulp.dest('dist/img'))
+   .pipe(browserSync.stream());
+});
+
+
+
 // Build Task - Run Uglify & Minify Plugins
-gulp.task('build', ['uglifyPlugins', 'minifyPlugins']);
+gulp.task('build', ['uglifyPlugins', 'minifyPlugins', 'compress', 'sass']);
 
 /* Watch Files For Changes */
 gulp.task('watch', function() {
@@ -265,24 +247,4 @@ gulp.task('images', function () {
         // maintaining the folder structure
         .pipe(gulp.dest(paths.dest+paths.folder+type.folder));
     });
-});
-
-
-/* twitter */
-gulp.task('twitter', function() {
-
-  var client = new Twitter({
-    consumer_key: 'Z9pVJo9jic4EC9kHnprVQsjAs',
-    consumer_secret: 'JM1aGjuKOikz8XHtIs72b85qdaf2jzmtTNT02n9RWmDlWME3Ad',
-    access_token_key: '2238399828-peO2Qpt2K3oTV0P1UeUQggQvVDhY7aEXP5IfRVD',
-    access_token_secret: '2UFPVGnOiEthmt2flhW82SAJR9nQ562DLrC1EIUxjL2lS'
-  });
-
-  var params = {screen_name: 'ashdarji'};
-  client.get('statuses/user_timeline', params, function(error, tweets, response) {
-    if (!error) {
-      // console.log(tweets);
-    }
-  });
-
 });
