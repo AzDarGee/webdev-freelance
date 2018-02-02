@@ -107,7 +107,8 @@ gulp.task('compress', function() {
 gulp.task('uglifyPlugins', function() {
   return gulp.src(['node_modules/mdbootstrap/js/bootstrap.js',
     'node_modules/jquery/dist/jquery.js',
-    'node_modules/MDBootstrap/js/mdb.js'])
+    'node_modules/MDBootstrap/js/mdb.js',
+    'node_modules/MDBootstrap/js/popper.min.js'])
     .pipe(rename({
       suffix: '.min',
       extname: '.js'
@@ -158,7 +159,8 @@ gulp.task('watch', function() {
   browserSync.init({
     server: {
       baseDir: "./"
-    }
+    },
+    port: 3030
   });
 
   gulp.watch('components/stylesheets/**/*.scss', ['sass']);
