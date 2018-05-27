@@ -12,6 +12,51 @@
     <link rel="stylesheet" href="dist/css/style.min.css">
   </head>
 
+
+  <!--Main Navigation-->
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark blue scrolling-navbar">
+      <a class="navbar-brand" href="#"><strong>Lucid Labs</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#featured-projects-title">Featured Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#past-projects">Past Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#packages-offerings">Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#connect">Connect</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Music Store</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav nav-flex-icons">
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"><i class="fa fa-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+      </nav>
+  </header>
+  <!--Main Navigation-->
+
   <!-- All Content -->
   <body class="smooth-scroll" id="top-socialmedia">
 
@@ -31,7 +76,7 @@
             <!-- Socials -->
             <!-- Icons Designed From FlatIcon -->
             <hr color="white">
-            <!-- <a href="https://www.instagram.com/ashdarji/" target="_blank"><img src="dist/images/icons/004-instagram.png" class="sm-icons-top"  alt=""></a>
+            <a href="https://www.instagram.com/ashdarji/" target="_blank"><img src="dist/images/icons/004-instagram.png" class="sm-icons-top"  alt=""></a>
             <a href="https://www.youtube.com/channel/UCnFgiwm9c_wyPKjPQSGDgJw" target="_blank"><img src="dist/images/icons/003-youtube.png" class="sm-icons-top" alt=""></a>
             <a href="https://twitter.com/AshDarji" target="_blank"><img src="dist/images/icons/005-twitter.png" class="sm-icons-top" alt=""></a>
             <a href="https://soundcloud.com/ashishdarji" target="_blank"><img src="dist/images/icons/006-soundcloud.png" class="sm-icons-top" alt=""></a>
@@ -40,10 +85,10 @@
             <a href="https://www.linkedin.com/in/ashdarji/" target="_blank"><img src="dist/images/icons/008-linkedin.png" class="sm-icons-top" alt=""></a>
             <a href="https://medium.com/@ashishdarji" target="_blank"><img src="dist/images/icons/010-medium.png" class="sm-icons-top" alt=""></a>
             <a href="https://github.com/AzDarGee" target="_blank"><img src="dist/images/icons/002-git.png" class="sm-icons-top fix-colour" alt=""></a>
-            <a href="#"><img src="dist/images/icons/011-stack-overflow.png" class="sm-icons-top fix-colour" alt="" ></a> -->
-            <!-- <a href="https://www.quora.com/profile/Ash-Darji" target="_blank"><img src="dist/images/icons/012-quora.png" class="sm-icons-top" alt=""></a> -->
-            <!-- <a href="#" ><img src="dist/images/icons/001-blog.png" class="sm-icons-top" alt=""></a> -->
-            <!-- <hr color="white"> -->
+            <a href="#"><img src="dist/images/icons/011-stack-overflow.png" class="sm-icons-top fix-colour" alt="" ></a>
+            <a href="https://www.quora.com/profile/Ash-Darji" target="_blank"><img src="dist/images/icons/012-quora.png" class="sm-icons-top" alt=""></a>
+            <a href="#" ><img src="dist/images/icons/001-blog.png" class="sm-icons-top" alt=""></a>
+            <hr color="white">
             <!-- <h3><small>"..."</small></h3> -->
             <!-- <hr color="white"> -->
             <!-- <p>
@@ -88,7 +133,7 @@
     <!-- All Content -->
     <div class="container smooth-scroll">
         <!-- About Labs -->
-        <div class="divider-new" id="about-me">
+        <div id="about-me" class="divider-new" id="about-me">
             <h2 class="h2-responsive wow bounceIn" style="visibility: visible; animation-name: bounceIn;">Lucid Labs</h2>
         </div>
         <!--Section: About -->
@@ -127,7 +172,7 @@
         </section>
 
         <!-- Featured Projects -->
-        <div class="divider-new">
+        <div id="featured-projects-title" class="divider-new">
             <h2 class="h2-responsive wow bounceIn" style="visibility: visible; animation-name: bounceIn;">Featured Projects</h2>
         </div>
 
@@ -806,7 +851,7 @@
         </div>
 
         <!-- Past Projects -->
-        <section>
+        <section id="past-projects">
           <div class="row">
             <!-- LUCIDLABS -->
             <div class="col-md-4">
@@ -1209,7 +1254,7 @@
         </section>
 
         <!-- Offerings/Packages -->
-        <div class="divider-new">
+        <div id="packages-offerings" class="divider-new">
             <h2 class="h2-responsive wow bounceIn" style="visibility: visible; animation-name: bounceIn;">Packages</h2>
         </div>
 
@@ -1458,8 +1503,7 @@
         </div>
 
         <!--CONTACT-->
-        <section class="section mb-4 text-center">
-
+        <section id="connect" class="section mb-4 text-center">
             <!--Section sescription-->
             <p class="section-description mb-1">
               Feel free to send a message and discuss any of the available packages being offered
@@ -1489,7 +1533,6 @@
                 </div>
               </div>
             </div>
-
             <div class="row">
                 <!--Second column-->
                 <div class="col-md-12">
@@ -1504,9 +1547,9 @@
                 <!--/Second column-->
 
             </div>
-
         </section>
         <!--/CONTACT-->
+
       </div>
 
     <!--Footer-->
@@ -1544,7 +1587,7 @@
         <!--/.Footer Links-->
         <!--Copyright-->
         <div class="footer-copyright" style="background-color: rgba(0,0,0,0.4);">
-            <div class="container-fluid">
+            <div class="container-fluid center">
               © 2018 | <a href="#"> LucidLabs LLC. </a>
             </div>
         </div>
