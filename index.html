@@ -12,23 +12,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>LucidLabs | Creative Studio</title>
+    <title>Lucid Labs | Creative Studio</title>
     <link rel="stylesheet" href="dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="dist/css/mdb.min.css">
     <link rel="stylesheet" href="dist/css/animate.min.css">
     <link rel="stylesheet" href="dist/css/font-awesome.min.css">
     <link rel="stylesheet" href="dist/css/style.min.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120785015-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120785015-1"></script> -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'UA-120785015-1');
     </script>
     <!-- Facebook Pixel Code -->
-    <script>
+    <!-- <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
     n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
@@ -38,7 +37,7 @@
     em: 'insert_email_variable'
     });
     fbq('track', 'PageView');
-    </script>
+    </script> -->
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=181464565833058&ev=PageView&noscript=1"
     /></noscript>
@@ -65,9 +64,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#past-projects">Past Projects</a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="#packages-offerings">Packages</a>
-                </li>
+                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" href="#connect">Connect</a>
                 </li>
@@ -236,14 +235,14 @@
                   <h5 class="indigo-text">Platform</h5>
                   <!-- <h6 class="indigo-text"><em>$25,000 +</em></h6> -->
 
-                  <button class="btn btn-primary" data-toggle="modal" data-target=".bd-milieu-modal-lg">Behind The Scenes</button>
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bd-city-sights-modal-lg">Behind The Scenes</button>
                   <hr>
                   <p class="card-text">
                     As a part of <a href="http://www.LucidLabs.io" target="_blank">LucidLabs</a>, <a href="https://github.com/AzDarGee/CitySites" target="_blank">CitySights</a>&reg; came to life as it transitioned from Milieu to a more ambitious project. Ashish Darji took what he learned from his past start up and built upon it. The Web App will soon be live. Stay Synced.
                   </p>
                 </div>
               </div>
-              <div class="modal fade bd-milieu-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal fade bd-city-sights-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -274,7 +273,7 @@
                           <div class="col-md-4"><strong>Technologies Used:</strong></div>
                           <div class="col-md-4">
                             <ul>
-                              <li>Ruby on Rails 4.2 (Backend)</li>
+                              <li>Ruby on Rails 6.0 (Backend)</li>
                               <li>ReactJS (Frontend)</li>
                               <li>MapBoxGL</li>
                               <li>PostGreSQL</li>
@@ -1041,109 +1040,106 @@
           </div>
           <div class="row">
             <!-- SOLOS - COMMENTED OUT -->
-            <!-- <div class="col-md-4">
-
-                <div class="card wow fadeInDown">
-
-                    <div class="view overlay hm-white-slight">
-                        <img src="dist/images/original/solos-front.png" class="img-fluid" alt="">
-                        <a>
-                            <div class="mask"></div>
-                        </a>
-                    </div>
-
-                    <div class="card-block text-center">
-
-                        <h4 class="card-title">Solos</h4>
-                        <button class="btn btn-primary" data-toggle="modal" data-target=".bd-solos-modal-lg">Behind The Scenes</button>
-                        <hr>
-                        <p class="card-text">
-                          The latest endevour underway at <strong>LucidLivin&reg;</strong>. This App allows people to find and consult
-                          the experts in any given field around them.
-                        </p>
-                    </div>
-
+            <div class="col-md-6">
+              <div class="card card-cascade wow fadeInDown wider reverse my-4">
+                <div class="view zoom overlay hm-black-strong">
+                  <img src="dist/images/original/solos-front2.png" class="img-fluid solos" alt="">
+                  <div class="mask flex-center">
+                    <p class="white-text">SoloS - 2016</p>
+                  </div>
                 </div>
+                <div class="card-body text-center">
+                  <h2 class="card-title"><strong>Solos</strong></h2>
+                  <h5 class="indigo-text">Platform</h5>
 
-                <div class="modal fade bd-solos-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title"><a href="http://www.besolos.io" target="_blank">Solos</a></h4>
-                      </div>
-                      <div class="modal-body">
-                        <a href="http://www.besolos.io" target="_blank"><img src="dist/images/original/solos-front.png" class="img-fluid" alt=""></a>
-                        <hr>
-                        <div class="container-fluid">
-                          <div class="row">
-                            <div class="col-md-1">
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bd-solos-modal-lg">Behind The Scenes</button>
+                  <hr>
+                  <p class="card-text">
+                    The latest endevour underway at <strong>Lucid Labs&reg;</strong>. This App allows people to find and consult
+                    the experts in any given field around them.
+                  </p>
+                </div>
+              </div>
 
-                            </div>
-                            <div class="col-md-10">
-                              <p>
-                                A fully-scaled responsive 'mobile-first' web application. This application allows users to
-                                discover & connect with the industry experts near them - in real-time.
-                                This application is currently in active development and the CEO has strictly enforced that
-                                no other information be released other than this. However, the tech stack below is freely
-                                given below.
-                              </p>
+              <div class="modal fade bd-solos-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title"><a href="http://solos.lucidlabs.io" target="_blank">Solos</a></h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    </div>
+                    <div class="modal-body">
+                      <a href="http://solos.lucidlabs.io" target="_blank"><img src="dist/images/original/solos-front2.png" class="img-fluid solos" alt=""></a>
+                      <hr>
+                      <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-md-1">
 
-                            </div>
-                            <div class="col-md-1">
-
-                            </div>
                           </div>
-                          <div class="row">
-                            <div class="col-md-4"><strong>Technologies Used:</strong></div>
-                            <div class="col-md-4">
-                              <ul>
-                                <li>Ruby on Rails 5.1 API (Backend)</li>
-                                <li>ReactJS (Frontend)</li>
-                                <li>MongoDB</li>
-                                <li>PostGreSQL</li>
-                                <li>FireBase</li>
-                                <li>WordPress</li>
-                              </ul>
-                            </div>
-                            <div class="col-md-4">
-                              <ul>
-                                <li>Material/Flat Design</li>
-                                <li>jQuery</li>
-                                <li>Ruby Plugins (Gems) ie. Devise, Cocoon, Pry, CarrierWave</li>
-                                <li>Redis</li>
-                                <li>RABL</li>
-                              </ul>
-                            </div>
+                          <div class="col-md-10">
+                            <p>
+                              A fully-scaled responsive 'mobile-first' web application. This application allows users to
+                              discover & connect with the industry experts near them - in real-time.
+                              This application is currently in active development and the CEO has strictly enforced that
+                              no other information be released other than this. However, the tech stack below is freely
+                              given below.
+                            </p>
+
                           </div>
-                          <div class="row">
-                            <div class="col-md-1">
-                              <hr>
-                              <strong>tags:</strong>
-                            </div>
-                            <div class="col-md-11">
-                              <hr>
-                              <span class="badge badge-default">Back-End</span>
-                              <span class="badge badge-primary">Front-End</span>
-                              <span class="badge badge-success">SEO</span>
-                              <span class="badge badge-info">Hosting</span>
-                              <span class="badge badge-warning">Encryption</span>
-                              <span class="badge badge-info">Performance Boost</span>
-                              <span class="badge badge-success">Testing</span>
-                              <span class="badge badge-warning">Analytics</span>
-                            </div>
+                          <div class="col-md-1">
+
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4"><strong>Technologies Used:</strong></div>
+                          <div class="col-md-4">
+                            <ul>
+                              <li>Ruby on Rails 5.1 API (Backend)</li>
+                              <li>ReactJS (Frontend)</li>
+                              <li>MongoDB</li>
+                              <li>PostGreSQL</li>
+                              <li>FireBase</li>
+                              <li>WordPress</li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4">
+                            <ul>
+                              <li>Material/Flat Design</li>
+                              <li>jQuery</li>
+                              <li>Ruby Plugins (Gems) ie. Devise, Cocoon, Pry, CarrierWave</li>
+                              <li>Redis</li>
+                              <li>RABL</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-1">
+                            <hr>
+                            <strong>tags:</strong>
+                          </div>
+                          <div class="col-md-11">
+                            <hr>
+                            <span class="badge badge-default">Back-End</span>
+                            <span class="badge badge-primary">Front-End</span>
+                            <span class="badge badge-success">SEO</span>
+                            <span class="badge badge-info">Hosting</span>
+                            <span class="badge badge-warning">Encryption</span>
+                            <span class="badge badge-info">Performance Boost</span>
+                            <span class="badge badge-success">Testing</span>
+                            <span class="badge badge-warning">Analytics</span>
                           </div>
                         </div>
                       </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                   </div>
                 </div>
-            </div> -->
+              </div>
+            </div>
             <!-- MILIEU -->
-            <div class="col-md-12">
+            <div class="col-md-6">
               <div class="card card-cascade wow fadeInUp wider reverse my-4">
                 <div class="view zoom overlay hm-black-strong">
                   <img src="dist/images/original/milieu-front.png" class="img-fluid" alt="">
@@ -1267,7 +1263,7 @@
                 <div class="modal-dialog modal-lg">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h4 class="modal-title"><a href="http://www.360pi.com" target="_blank">360 Pi</a></h4>
+                      <h4 class="modal-title"><a href="http://www.360pi.com" target="_blank">360 pi</a></h4>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     </div>
                     <div class="modal-body">
@@ -2199,7 +2195,7 @@
                   </div>
               </div>
             </div> -->
-          </section>
+        </section>
 
         <!-- Beat Store -->
         <div class="divider-new">
@@ -2284,7 +2280,7 @@
                 <!--First column-->
                 <div class="col-md-12 text-center">
 
-                  <!-- <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+                  <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
 
                   <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
 
@@ -2300,7 +2296,7 @@
 
                   <a class="icons-sm git-ic"><i class="fa fa-github"> </i></a>
 
-                  <a class="icons-sm email-ic"><i class="fa fa-envelope-o"> </i></a> -->
+                  <a class="icons-sm email-ic"><i class="fa fa-envelope-o"> </i></a>
 
                 </div>
                 <!--/.First column-->
