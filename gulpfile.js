@@ -150,7 +150,7 @@ gulp.task('copyMDBImgs', function() {
 });
 
 // Build Task - Run Uglify & Minify Plugins
-gulp.task('build', ['compress', 'sass', 'uglifyPlugins', 'minifyPlugins']);
+gulp.task('build', gulp.parallel('compress', 'sass', 'uglifyPlugins', 'minifyPlugins'));
 
 /* Watch Files For Changes */
 gulp.task('watch', function() {
@@ -163,17 +163,17 @@ gulp.task('watch', function() {
     port: 3030
   });
 
-  gulp.watch('components/stylesheets/**/*.scss', ['sass']);
-  gulp.watch('components/scripts/*.js', ['compress']);
+  gulp.watch('components/stylesheets/**/*.scss', gulp.series('sass'));
+  gulp.watch('components/scripts/*.js', gulp.series('compress'));
 
   // Watch html changes and reload browser on save
   gulp.watch("*.html").on('change', browserSync.reload);
 
 });
 
-gulp.task('startServer', ['build', 'watch']);
+gulp.task('startServer', gulp.series('build', 'watch'));
 
-gulp.task('newProject', ['updateTools', 'updatePackages']);
+gulp.task('newProject', gulp.parallel('updateTools', 'updatePackages'));
 
 // Initialize Project Script
 
@@ -211,13 +211,14 @@ var images = [
     { folder: 'bg2x', width: 2048, crop: false },
     { folder: 'original', crop: false },
     { folder: 'icons', crop: false },
+    { folder: 'track-pics', width: 376, height: 376, crop: true },
     { folder: 'projects', width: 300, height: 300, crop: false },
     { folder: 'profile', width: 150, height: 150, crop: false },
     { folder: 'profile2x', width: 250, height: 400, crop: false }
 ];
 
 // images gulp task
-gulp.task('images', function () {
+gulp.task('images', async function () {
 
     // loop through image groups
     images.forEach(function(type){

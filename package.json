@@ -11,16 +11,18 @@
   "author": "Ashish Darji",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.24.4",
-    "gulp": "^3.9.1",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.0",
     "gulp-cache": "^1.0.2",
     "gulp-code-sine": "^1.0.1",
     "gulp-exec": "^3.0.1",
-    "gulp-image-resize": "^0.13.0",
-    "gulp-imagemin": "^4.1.0",
+    "gulp-image-resize": "^0.13.1",
+    "gulp-imagemin": "^6.1.1",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "imagemin-pngquant": "^5.1.0"
+    "imagemin-pngquant": "^8.0.0",
+    "node-sass": "^4.13.0",
+    "gulp-sass": "^4.0.2"
   },
   "dependencies": {
     "animate.css": "^3.6.1",
@@ -28,17 +30,19 @@
     "connect-form": "^0.2.1",
     "font-awesome": "^4.7.0",
     "foundation-sites": "^6.3.0",
-    "jquery": "^3.1.1",
+    "gulp-cli": "^2.2.0",
+    "gulp-sass": "^4.0.2",
+    "jquery": "^3.4.1",
     "jquery-placeholder": "~2.3.1",
     "mdbootstrap": "^4.5.3",
-    "modernizr": "^3.6.0",
-    "node-sass": "^4.9.0",
+    "modernizr": "^3.8.0",
     "nodemailer": "^4.6.5",
     "popper.js": "1.12.9",
     "sendmail": "^1.4.1",
-    "velocity": "^*"
+    "velocity": "^*",
+    "what-input": "^4.1.0"
   },
   "engines": {
-    "node": "9.2.1"
+    "node": "12.11.1"
   }
 }
