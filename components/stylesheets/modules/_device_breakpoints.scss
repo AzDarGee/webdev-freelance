@@ -1,0 +1,550 @@
+////////////////////////////////////////////////////////
+// Cleaner Breakpoint Media Queries - Desktop Screens //
+////////////////////////////////////////////////////////
+
+@mixin bp-xxlarge {
+  @media only screen and (max-width: 160em) {
+    @content;
+  }
+}
+
+
+@mixin bp-xlarge {
+  @media only screen and (max-width: 128em) {
+    @content;
+  }
+}
+
+
+@mixin bp-large {
+  @media only screen and (max-width: 80em) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
+}
+
+@mixin bp-xsmall {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+@mixin bp-xx-small {
+  @media only screen and (max-width: 25em) {
+    @content;
+  }
+}
+
+@mixin bp-xxsmall {
+  @media only screen and (max-width: 20em) {
+    @content;
+  }
+}
+
+@mixin bp-xxxsmall {
+  @media only screen and (max-width: 15em) {
+    @content;
+  }
+}
+
+// USAGE OF BREAKPOINTS:
+// @include bp-small {
+//     width: 100%;
+//     float: none;
+//     margin: 0;
+//   }
+
+
+////////////////////////////////////////////////////////
+// Cleaner Breakpoint Media Queries - Mobile Screens  //
+////////////////////////////////////////////////////////
+
+/// IPHONES ///
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+@mixin bp-iphone4-4s {
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+    @content;
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+    @content;
+  }
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+@mixin bp-iphone5-5s {
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+    @content;
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 320px)
+    and (max-device-width: 568px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+    @content;
+  }
+}
+
+/* ----------- iPhone 6 ----------- */
+
+@mixin bp-iphone6 {
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+    @content;
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 375px)
+    and (max-device-width: 667px)
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+    @content;
+  }
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+@mixin iphone6-plus {
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3) {
+    @content;
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+    @content;
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 414px)
+    and (max-device-width: 736px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+    @content;
+  }
+}
+
+/// Android - Galaxy Phones ///
+
+/* ----------- Galaxy S3 ----------- */
+
+@mixin bp-android-galaxy-s3 {
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 2) {
+    @content;
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+    @content;
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+    @content;
+  }
+}
+
+/* ----------- Galaxy S4 ----------- */
+
+@mixin bp-android-galaxy-s4 {
+
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3) {
+    @content;
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+    @content;
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 320px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+    @content;
+  }
+}
+
+/* ----------- Galaxy S5 ----------- */
+
+@mixin bp-android-galaxy-s5 {
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3) {
+    @content;
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+    @content;
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+    @content;
+  }
+
+}
+
+/// Android - HTC phones ///
+
+/* ----------- HTC One ----------- */
+@mixin bp-android-htc-one {
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3) {
+    @content;
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) {
+    @content;
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 360px)
+    and (device-height: 640px)
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: landscape) {
+    @content;
+  }
+}
+
+/// IPADs ///
+
+/* ----------- iPad mini ----------- */
+
+@mixin bp-ipad-mini {
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+    @content;
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1) {
+    @content;
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 1) {
+    @content;
+  }
+}
+
+/* ----------- iPad 1 and 2 ----------- */
+
+@mixin bp-ipad-1-2 {
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+    @content;
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 1) {
+    @content;
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 1) {
+    @content;
+  }
+}
+
+/* ----------- iPad 3 and 4 ----------- */
+
+@mixin bp-ipad-3-4 {
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: portrait)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 768px)
+    and (max-device-width: 1024px)
+    and (orientation: landscape)
+    and (-webkit-min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+
+/// Android - Galaxy Tabs ///
+
+/* ----------- Galaxy Tab 10.1 ----------- */
+
+@mixin bp-android-galaxy-tab {
+
+  /* Portrait and Landscape */
+  @media
+    (min-device-width: 800px)
+    and (max-device-width: 1280px) {
+    @content;
+  }
+
+  /* Portrait */
+  @media
+    (max-device-width: 800px)
+    and (orientation: portrait) {
+    @content;
+  }
+
+  /* Landscape */
+  @media
+    (max-device-width: 1280px)
+    and (orientation: landscape) {
+    @content;
+  }
+}
+
+/// Android - Nexus Tabs ///
+
+/* ----------- Asus Nexus 7 ----------- */
+
+@mixin bp-android-nexus-tab {
+
+  /* Portrait and Landscape */
+  @media screen
+    and (device-width: 601px)
+    and (device-height: 906px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332) {
+    @content;
+  }
+
+  /* Portrait */
+  @media screen
+    and (device-width: 601px)
+    and (device-height: 906px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332)
+    and (orientation: portrait) {
+    @content;
+  }
+
+  /* Landscape */
+  @media screen
+    and (device-width: 601px)
+    and (device-height: 906px)
+    and (-webkit-min-device-pixel-ratio: 1.331)
+    and (-webkit-max-device-pixel-ratio: 1.332)
+    and (orientation: landscape) {
+    @content;
+  }
+}
+
+/// Kindle Fire Tabs ///
+
+/* ----------- Kindle Fire HD 7" ----------- */
+
+@mixin bp-kindle-7 {
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 800px)
+    and (max-device-width: 1280px)
+    and (-webkit-min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 800px)
+    and (max-device-width: 1280px)
+    and (-webkit-min-device-pixel-ratio: 1.5)
+    and (orientation: portrait) {
+    @content;
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 800px)
+    and (max-device-width: 1280px)
+    and (-webkit-min-device-pixel-ratio: 1.5)
+    and (orientation: landscape) {
+    @content;
+  }
+}
+
+/* ----------- Kindle Fire HD 8.9" ----------- */
+
+@mixin bp-kindle-9 {
+
+  /* Portrait and Landscape */
+  @media only screen
+    and (min-device-width: 1200px)
+    and (max-device-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+
+  /* Portrait */
+  @media only screen
+    and (min-device-width: 1200px)
+    and (max-device-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 1.5)
+    and (orientation: portrait) {
+    @content;
+  }
+
+  /* Landscape */
+  @media only screen
+    and (min-device-width: 1200px)
+    and (max-device-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 1.5)
+    and (orientation: landscape) {
+    @content;
+  }
+}

@@ -1,0 +1,43 @@
+
+
+html,
+body,
+.view {
+    height: 100%;
+    // background: rgba(236, 240, 241, 1);
+    // background-color: rgba(236, 240, 241, 1);
+    background: rgba(33,33,33,1);
+    background-color: rgba(33,33,33, 1);
+    color: whitesmoke;
+}
+
+.card-body {
+  background: rgba(22,22,22,1);
+  color: whitesmoke;
+}
+
+.modal-content {
+  background-color: rgba(33,33,33,1);
+  .close {
+    color: whitesmoke;
+  }
+  .tags {
+    display: none;
+  }
+  .modal-footer {
+    display: contents;
+  }
+}
+
+hr{ 
+  height: 1px;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  border: none;
+}
+
+.top-nav-collapse {
+    // background-color: #4285F4;
+    // background-color: rgba(22,22,22,1);
+    background-color: #394046;
+}
