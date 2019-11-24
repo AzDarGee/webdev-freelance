@@ -1,3 +1,49 @@
+// ROBOTO BOLD
+@font-face {
+  font-family: 'RobotoBold';
+  src: url('../font/roboto/Roboto-Bold.eot');
+  src: url('../font/roboto/Roboto-Bold.eot') format('embedded-opentype'), url('../font/roboto/Roboto-Bold.woff2') format('woff2'), url('../font/Roboto-Bold.woff') format('woff'), url('../font/roboto/Roboto-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// ROBOTO Light
+@font-face {
+  font-family: 'RobotoLight';
+  src: url('../font/roboto/Roboto-Light.eot');
+  src: url('../font/roboto/Roboto-Light.eot') format('embedded-opentype'), url('../font/roboto/Roboto-Light.woff2') format('woff2'), url('../font/Roboto-Light.woff') format('woff'), url('../font/roboto/Roboto-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// ROBOTO Medium
+@font-face {
+  font-family: 'RobotoMedium';
+  src: url('../font/roboto/Roboto-Medium.eot');
+  src: url('../font/roboto/Roboto-Medium.eot') format('embedded-opentype'), url('../font/roboto/Roboto-Medium.woff2') format('woff2'), url('../font/Roboto-Medium.woff') format('woff'), url('../font/roboto/Roboto-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// ROBOTO Regular
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url('../font/roboto/Roboto-Regular.eot');
+  src: url('../font/roboto/Roboto-Regular.eot') format('embedded-opentype'), url('../font/roboto/Roboto-Regular.woff2') format('woff2'), url('../font/Roboto-Regular.woff') format('woff'), url('../font/roboto/Roboto-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// ROBOTO Thin
+@font-face {
+  font-family: 'RobotoThin';
+  src: url('../font/roboto/Roboto-Thin.eot');
+  src: url('../font/roboto/Roboto-Thin.eot') format('embedded-opentype'), url('../font/roboto/Roboto-Thin.woff2') format('woff2'), url('../font/Roboto-Thin.woff') format('woff'), url('../font/roboto/Roboto-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 html, body {
   background: #fff;
+  font-family: Roboto, RobotoLight, RobotoRegular;
 }

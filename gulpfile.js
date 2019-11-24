@@ -136,14 +136,14 @@ gulp.task('minifyPlugins', function() {
 });
 
 // Copy Fonts
-gulp.task('copyFonts', function() {
-   gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg}')
+gulp.task('copyFonts', async function() {
+   gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg,eot,woff2,otf}')
    .pipe(gulp.dest('dist/font'))
    .pipe(browserSync.stream());
 });
 
 //Copy MDBootstrap Imgs Folder to Dist
-gulp.task('copyMDBImgs', function() {
+gulp.task('copyMDBImgs', async function() {
    gulp.src('./node_modules/mdbootstrap/img/**/*.{png,svg,gif,jpg,jpeg,}')
    .pipe(gulp.dest('dist/img'))
    .pipe(browserSync.stream());
@@ -153,7 +153,7 @@ gulp.task('copyMDBImgs', function() {
 gulp.task('build', gulp.parallel('compress', 'sass', 'uglifyPlugins', 'minifyPlugins'));
 
 /* Watch Files For Changes */
-gulp.task('watch', function() {
+gulp.task('watch', async function() {
 
   // Define server for browser sync
   browserSync.init({
