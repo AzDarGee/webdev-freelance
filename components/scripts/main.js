@@ -12,6 +12,7 @@ $(document).ready(function() {
   // Scroll To Top
   $('#bottom-socialmedia').click('on',function(e) {
     $(window).scrollTop(0);
+    // row bow
   });
 
   // Toggle Light / Dark Theme
