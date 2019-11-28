@@ -257,3 +257,11 @@ body,
     text-align: center;
   }
 }
+
+@include bp-small {
+  .navbar {
+    .themeToggleMobile {
+      display: inline-block;
+    }
+  }
+}
