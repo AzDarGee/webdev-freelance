@@ -140,11 +140,17 @@ gulp.task('copyFonts', async function() {
    gulp.src('./node_modules/font-awesome/fonts/**/*.{ttf,woff,eof,svg,eot,woff2,otf}')
    .pipe(gulp.dest('dist/font'))
    .pipe(browserSync.stream());
+   gulp.src('./components/font/**/*.{ttf,woff,eof,svg,eot,woff2,otf}')
+   .pipe(gulp.dest('dist/font'))
+   .pipe(browserSync.stream());
 });
 
 //Copy MDBootstrap Imgs Folder to Dist
 gulp.task('copyMDBImgs', async function() {
    gulp.src('./node_modules/mdbootstrap/img/**/*.{png,svg,gif,jpg,jpeg,}')
+   .pipe(gulp.dest('dist/img'))
+   .pipe(browserSync.stream());
+   gulp.src('./img/**/*.{png,svg,gif,jpg,jpeg,}')
    .pipe(gulp.dest('dist/img'))
    .pipe(browserSync.stream());
 });
