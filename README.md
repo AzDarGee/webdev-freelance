@@ -20,18 +20,18 @@ This is Ashish Darji's software development consulting website.
 cd into the directory.
 
 
-'''
+```
 gulp updateTools 
-'''
+```
 
-'''
+```
 gulp updatePackages
-'''
+```
 
-'''
+```
 gulp build
-'''
+```
 
-'''
+```
 gulp watch
-'''
+```
