@@ -13,3 +13,25 @@ This is Ashish Darji's software development consulting website.
 * AnimateCSS
 * VelocityJS
 * Etc...
+
+
+## Launch Website
+
+cd into the directory.
+
+
+'''
+gulp updateTools 
+'''
+
+'''
+gulp updatePackages
+'''
+
+'''
+gulp build
+'''
+
+'''
+gulp watch
+'''
