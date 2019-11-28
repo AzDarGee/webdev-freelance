@@ -19,19 +19,19 @@ This is Ashish Darji's software development consulting website.
 
 cd into the directory.
 
-
+1. 
 ```
 gulp updateTools 
 ```
-
+2.
 ```
 gulp updatePackages
 ```
-
+3.
 ```
 gulp build
 ```
-
+4.
 ```
 gulp watch
 ```
