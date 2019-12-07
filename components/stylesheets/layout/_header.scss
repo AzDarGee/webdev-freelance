@@ -36,9 +36,16 @@ body,
     background-color: rgba(236, 240, 241, 1);
 }
 
+.img-modal {
+  cursor: pointer;
+}
+
 .modal-content {
   .tags {
     display: none;
+  }
+  .tech-used {
+    // display: none;
   }
   .modal-footer {
     display: contents;
