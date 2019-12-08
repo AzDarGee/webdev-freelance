@@ -50,10 +50,16 @@ body,
     display: none;
   }
   .tech-used {
-    // display: none;
+    display: none; 
   }
   .modal-footer {
     display: contents;
+  }
+  .lucid-underline {
+    text-decoration: underline;
+  }
+  .lucid-overline {
+    text-decoration: overline;
   }
 }
 
