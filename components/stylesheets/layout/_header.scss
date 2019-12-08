@@ -64,7 +64,7 @@ body,
 }
 
 .main-bg {
-    background: url("../images/bg2x/creative-workspace-4.jpg")no-repeat center center fixed;
+    background: url("../images/bg2x/creative-workspace.jpg")no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -254,6 +254,18 @@ body,
 }
 
 #featured-projects {
+  .card {
+    margin: 0.5em;
+    .view {
+      @include blur(10px);
+    }
+    .view:hover {
+      @include blur(0);
+    }
+  }
+}
+
+.beat-leases {
   .card {
     margin: 0.5em;
     .view {
