@@ -50,7 +50,6 @@ $(document).ready(function() {
   // Haptic Sound Hover
   var audio = $("#haptic-sound")[0];
   audio.volume = 0.05;
-  console.log(audio);
   $(".img-modal").mouseenter(function() {
     audio.play();
   });
@@ -58,7 +57,6 @@ $(document).ready(function() {
   // Haptic Sound Mouse Click
   var audio2 = $("#haptic-sound-click")[0];
   audio2.volume = 0.05;
-  console.log(audio);
   document.body.addEventListener('click', function() {
     audio2.play();
   }, true); 
