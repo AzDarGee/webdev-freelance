@@ -30,7 +30,7 @@ $(document).ready(function() {
       $(".close").css({"color": "whitesmoke"});
       $("hr").css({"height": "1px", "color":"whitesmoke","background-color": "whitesmoke","border": "none"});
       $(".top-nav-collapse").css({"background-color": "#394046"});
-      
+
     } else {
       // REMOVE DARK
       this.innerText = "Dark";

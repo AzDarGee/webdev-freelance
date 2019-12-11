@@ -41,6 +41,10 @@ body,
     }
 }
 
+#themeToggle {
+  color: whitesmoke;
+}
+
 .img-modal {
   cursor: pointer;
 }
@@ -290,7 +294,7 @@ body,
 
 @include bp-small {
   .navbar {
-    .themeToggleMobile {
+    #themeToggle {
       display: inline-block;
     }
   }
