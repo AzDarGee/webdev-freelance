@@ -9,7 +9,10 @@ var gzip = require('gulp-gzip');
 var uglify = require('gulp-uglify');
 var browserSync = require('browser-sync').create();
 var imagemin = require('gulp-imagemin');
+var jpegtran = require('imagemin-jpegtran');
+var webp = require('imagemin-webp');
 var pngquant = require('imagemin-pngquant');
+var optiPng = require('imagemin-optipng');
 var imageresize = require('gulp-image-resize');
 var cache = require('gulp-cache');
 var gulpUtil = require('gulp-util');
@@ -250,13 +253,26 @@ gulp.task('images', async function () {
         .pipe(imageresize(resize_settings))
 
         // optimize the images
-        .pipe(imagemin({
-            progressive: true,
-            // set this if you are using svg images
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
+        // .pipe(imagemin({
+        //     progressive: true,
+        //     // set this if you are using svg images
+        //     svgoPlugins: [{removeViewBox: false}],
+        //     use: [pngquant()]
+        // }))
+        .pipe(imagemin([
+          imagemin.gifsicle({interlaced: true}),
+          imagemin.jpegtran({progressive: true}),
+          imagemin.optipng({optimizationLevel: 0}),
+          imagemin.svgo({
+            plugins: [
+              {removeViewBox: true},
+              {cleanupIDs: false}
+            ]
+          })
 
+        ], {
+          verbose: true
+        }))
         // output each image to the dest path
         // maintaining the folder structure
         .pipe(gulp.dest(paths.dest+paths.folder+type.folder));
