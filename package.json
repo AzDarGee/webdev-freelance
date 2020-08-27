@@ -5,8 +5,7 @@
   "description": "Lucid Labs Website",
   "main": "web.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node web.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ashish Darji",
   "license": "ISC",

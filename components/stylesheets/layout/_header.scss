@@ -67,6 +67,7 @@ body,
   }
   .btn {
     border-left: 0.2em solid rgba(22,22,22,0.5);
+    border-right: 0.2em solid rgba(22,22,22,0.5);
   }
 }
 
@@ -255,7 +256,7 @@ body,
     }
     .view:hover {
       @include blur(0);
-      filter: saturate(3);
+      filter: saturate(2);
     }
   }
 }
@@ -281,7 +282,7 @@ body,
     }
     .view:hover {
       @include blur(0);
-      filter: saturate(1);
+      filter: saturate(2);
     }
   }
 }
