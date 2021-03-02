@@ -235,14 +235,81 @@
 
         <!-- Section: Trending Projects -->
         <section id="trending-projects">
-          <!-- Lucid Lofts |WHAT| -->
+          <!-- Rhythms of Mind -->
           <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
+              <div class="card card-cascade wow fadeInUp wider reverse my-4">
+                <div class="view zoom overlay hm-black-strong img-modal" data-toggle="modal" data-target=".bd-rhythms-of-mind-modal-lg">
+                  <img src="dist/images/original/ROM-Front.png" class="img-fluid" alt="">
+                  <div class="mask flex-center">
+                    <p class="white-text">Rhythms of Mind - 2021</p>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <h2 class="card-title"><strong>Rhythms of Mind</strong></h2>
+                  <h5 class="indigo-text">Music</h5>
+                  <button class="btn btn-primary" data-toggle="modal" data-target=".bd-rhythms-of-mind-modal-lg">Buy</button>
+                  <hr>
+                  <p class="card-text">
+                    ChillTape V1 - Rhythms of Mind (ROM)
+                  </p>
+                </div>
+              </div>
+              <div class="modal fade bd-rhythms-of-mind-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <a href="https://store.lucidlabs.io/products/chilltape-v1-rhythms-of-mind" target="_blank"><h4 class="modal-title">ChillTape V1 - Rhythms of Mind</h4></a>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      </div>
+                      <div class="modal-body">
+                        <a href="https://store.lucidlabs.io/products/chilltape-v1-rhythms-of-mind" target="_blank">
+                          <img src="dist/images/original/ROM-Front.png" class="img-fluid" alt="Rhythms of Mind by Zygo Zen">
+                        </a>
+                        <hr>
+                        <a href="https://store.lucidlabs.io/products/chilltape-v1-rhythms-of-mind" target="_blank">
+                          <img src="dist/images/original/ROM-Tracklist.webp" class="img-fluid" alt="Rhythms of Mind by Zygo Zen">
+                        </a>
+                        <hr>
+                        <div class="container-fluid">
+                          <div class="row">
+                            <div class="col-md-3">
+                            </div>
+                            <div class="col-md-6 text-center">
+                              <p>
+                                <strong>
+                                  ChillTape V1: Rhythms of Mind
+                              </strong>
+                              </p>
+                              <a href="https://store.lucidlabs.io/products/chilltape-v1-rhythms-of-mind" target="_blank"><button class="btn btn-warning">Buy</button></a>
+                              <p>
+                                <a target="_blank" href="https://distrokid.com/hyperfollow/zygozen/chilltape-v1-rhythms-of-mind">Stream</a>
+                              </p>
+                              <hr>
+                              <p>February 27<sup>th</sup>/ 2021</p>
+                              <!-- <a href="#">
+                                <button class="btn btn-warning">Deluxe HQ - Download (14GB) - Coming Soon</button>
+                              </a> -->
+                            </div>
+                            <div class="col-md-3">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <!-- Lucid Lofts |WHAT| -->
+            <div class="col-md-6">
               <div class="card card-cascade wow fadeInUp wider reverse my-4">
                 <div class="view zoom overlay hm-black-strong img-modal" data-toggle="modal" data-target=".bd-lucid-lofts-modal-lg">
                   <img src="dist/images/original/Polaroid-Cover.png" class="img-fluid" alt="">
                   <div class="mask flex-center">
-                    <p class="white-text">Lucid Lofts |WHAT| - 2019</p>
+                    <p class="white-text">Lucid Lofts |WHAT| - 2020</p>
                   </div>
                 </div>
                 <div class="card-body text-center">
@@ -264,10 +331,10 @@
                       </div>
                       <div class="modal-body">
                         <a href="https://store.lucidlabs.io/products/zen-lucid-lofts-what-album" target="_blank">
-                          <img src="dist/images/original/Polaroid-Cover.png" class="img-fluid" alt="Lucid Lofts |WHAT| by Zen">
+                          <img src="dist/images/original/Polaroid-Cover.png" class="img-fluid" alt="Lucid Lofts |WHAT| by Zygo Zen">
                         </a>
                         <a href="https://store.lucidlabs.io/products/zen-lucid-lofts-what-album" target="_blank">
-                          <img src="dist/images/original/TrackList-Back.png" class="img-fluid" alt="Lucid Lofts |WHAT| by Zen">
+                          <img src="dist/images/original/TrackList-Back.png" class="img-fluid" alt="Lucid Lofts |WHAT| by Zygo Zen">
                         </a>
                         <hr>
                         <div class="container-fluid">
@@ -302,7 +369,7 @@
                     </div>
                   </div>
                 </div>
-            </div>     
+            </div>       
           </div>
           <!-- City Sights -->
           <div class="row">
@@ -1132,9 +1199,6 @@
                             <p>
                               A fully-scaled responsive 'mobile-first' web application. This application allows users to
                               discover & connect with the industry experts near them - in real-time.
-                              This application is currently in active development and the CEO has strictly enforced that
-                              no other information be released other than this. However, the tech stack below is freely
-                              given below.
                             </p>
 
                           </div>
@@ -1148,10 +1212,9 @@
                             <ul>
                               <li>Ruby on Rails 5.1 API (Backend)</li>
                               <li>ReactJS (Frontend)</li>
-                              <li>MongoDB</li>
                               <li>PostGreSQL</li>
                               <li>FireBase</li>
-                              <li>WordPress</li>
+                              <li>MapBox</li>
                             </ul>
                           </div>
                           <div class="col-md-4">
