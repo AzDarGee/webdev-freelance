@@ -77,9 +77,9 @@ body,
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    @include blur(8px);
+    @include blur(0px);
     &:hover {
-      @include blur(0px);
+      @include blur(8px);
     }
 }
 
@@ -95,9 +95,9 @@ body,
 }
 
 @media only screen and (max-width: 768px) {
-    .navbar {
-        background-color: #4285F4;
-    }
+  .navbar {
+      background-color: #4285F4;
+  }
 }
 
 .profile-desc {
@@ -172,11 +172,11 @@ body,
 
   .fix-colour {
     -webkit-filter: invert(100%); filter: invert(100%);
-    &:hover {
-      -webkit-filter: opacity(50%); filter: opacity(50%);
-      -webkit-filter: blur(3px); filter: blur(3px);
-      -webkit-filter: invert(100%); filter: invert(100%);
-    }
+    // &:hover {
+    //   -webkit-filter: opacity(50%); filter: opacity(50%);
+    //   -webkit-filter: blur(3px); filter: blur(3px);
+    //   -webkit-filter: invert(100%); filter: invert(100%);
+    // }
   }
 
   @include bp-iphone5-5s {
@@ -252,11 +252,10 @@ body,
   .card {
     margin: 0.5em;
     .view {
-      @include blur(10px);
+      @include blur(0px);
     }
     .view:hover {
-      @include blur(0);
-      filter: saturate(2);
+      @include blur(0px);
     }
   }
 }
@@ -265,11 +264,10 @@ body,
   .card {
     margin: 0.5em;
     .view {
-      @include blur(10px);
+      @include blur(0px);
     }
     .view:hover {
       @include blur(0);
-      filter: saturate(2);
     }
   }
 }
@@ -282,7 +280,6 @@ body,
     }
     .view:hover {
       @include blur(0);
-      filter: saturate(2);
     }
   }
 }
