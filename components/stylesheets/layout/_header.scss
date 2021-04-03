@@ -90,6 +90,11 @@ body,
     opacity: 0.8;
 }
 
+.navbar-pages {
+  background-color: #4285F4;
+  opacity: 0.8;
+}
+
 .top-nav-collapse {
     background-color: #4285F4;
 }
@@ -248,7 +253,7 @@ body,
   }
 }
 
-#trending-projects {
+#featured-projects {
   .card {
     margin: 0.5em;
     .view {
@@ -260,7 +265,7 @@ body,
   }
 }
 
-#featured-projects {
+#packages {
   .card {
     margin: 0.5em;
     .view {
